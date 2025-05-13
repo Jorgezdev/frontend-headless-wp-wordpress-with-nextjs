@@ -1,5 +1,5 @@
 Nextjs con wordpress
-
+(proyecto original se llama: frontend-headless-wp, le cambie el nombre a frontend-headless-wp-wordpress-with-nextjs debido a un error, pero las configuraciones estan en el primer nombre, considerar al momento de descargar y trabajar en el)
 Crear un frontend headless para WordPress usando React es totalmente posible y bastante común hoy en día. Te explico cómo partir, qué alternativas tienes y qué tan difícil es, según tu experiencia.
 ________________________________________
 📌 ¿Qué es un WordPress Headless?

@@ -1,9 +1,14 @@
-// src/app/page.tsx
 import { getPageBySlug } from "@/lib/api";
 import { notFound } from "next/navigation";
 
-export default async function HomePage() {
-  const page = await getPageBySlug("inicio"); // cambia "inicio" por el slug real si es distinto
+type Params = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function Page({ params }: Params) {
+  const page = await getPageBySlug(params.slug);
 
   if (!page) return notFound();
 

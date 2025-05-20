@@ -1,9 +1,23 @@
 // src/app/page.tsx
 import { getPageBySlug } from "@/lib/api";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ilustre Municipalidad de Conchalí",
+  description: "Sitio web oficial de la Ilustre Municipalidad de Conchalí. Infórmate sobre noticias, servicios y contacto.",
+  keywords: ["Municipalidad de Conchalí", "Conchalí", "Chile", "Gobierno local", "Servicios públicos"],
+  openGraph: {
+    title: "Ilustre Municipalidad de Conchalí",
+    description: "Conoce los servicios, noticias y contacto de la Municipalidad de Conchalí.",
+    url: "https://municipalidadconchali.cl", // cámbialo por el dominio final
+    type: "website",
+    locale: "es_CL",
+  },
+};
 
 export default async function HomePage() {
-  const page = await getPageBySlug("inicio"); // cambia "inicio" por el slug real si es distinto
+  const page = await getPageBySlug("inicio"); // asegúrate que el slug coincida con el de WordPress
 
   if (!page) return notFound();
 
